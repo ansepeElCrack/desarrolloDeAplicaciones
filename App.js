@@ -35,7 +35,7 @@ export default function App (){
 
   const mostrarDatos = () => {
         setTexto(
-                <Text style={{marginTop:10,marginBottom:10,fontSize:15, textAlign: 'center',fontWeight: 'bold'}}>Mi nombre es  
+                <Text style={{marginTop:10,marginBottom:10,fontSize:15, textAlign: 'center',fontWeight: 'bold',}}>Mi nombre es  
                         <Text style={{ color: 'blue'}}> {nombre} {apellidos} </Text> 
                         con edad <Text style={{ color: 'red'}}>{edad} </Text>
                          y correo <Text style={{ color: 'blue'}}> {correo} </Text>
@@ -48,8 +48,8 @@ export default function App (){
                 height: 200,
                 borderWidth: 2,
                 borderColor: "#2E4053",
-                alignItems: "center",
-                marginLeft:30,
+                alignSelf:'center',
+              
                 borderRadius:50
                                
                 }}
@@ -62,19 +62,23 @@ export default function App (){
         miRegex()
   }
   
+
+
+
+
   
   return(
-    <ScrollView>
+    <ScrollView style={{ backgroundColor:'#D6EAF8'}}>
     
-
-      <View style={{ flex: 1, justifyContent:'center', alignItems: "center" }}>
+        
+      <View style={{ flex: 1, justifyContent:'center', alignItems: "center", backgroundColor:'#D6EAF8' }}>
 
                   <View style={{flexDirection:"row",
                                 alignItems:'center',
                                 marginTop:20,
                                 borderWidth: 2,
                                 borderRadius: 20,
-                                padding: 10,}}>
+                                padding: 10}}>
 
 
                               <Text style={{marginLeft:10,marginRight:15,fontStyle:'italic',fontSize:18,fontWeight:'bold'}}>Nombre:</Text> 
@@ -102,7 +106,7 @@ export default function App (){
 
                               <Text style={{marginLeft:10,marginRight:15,fontStyle:'italic',fontSize:18,fontWeight:'bold'}}>Apellidos:</Text> 
 
-                              <TextInput style={{marginRight:20,borderColor:'grey',width:160}} 
+                              <TextInput style={{marginRight:20,borderColor:'grey',width:152}} 
 
                                       placeholder="Introduce tus Apellidos..."  
                                       onChangeText={(apellidos) => setApellidos(apellidos)} 
@@ -118,7 +122,7 @@ export default function App (){
 
                               <Text style={{marginLeft:10,marginRight:15,fontStyle:'italic',fontSize:18,fontWeight:'bold'}}>Edad:</Text> 
 
-                              <TextInput style={{marginRight:20,borderColor:'grey',width:194}} 
+                              <TextInput style={{marginRight:20,borderColor:'grey',width:144}} 
 
                                       placeholder="Introduce tu Edad..."  
                                       onChangeText={(edad) => setEdad(edad)} 
@@ -132,9 +136,9 @@ export default function App (){
                                 borderRadius: 20,
                                 padding: 10}}>
 
-                              <Text style={{marginLeft:10,marginRight:15,fontStyle:'italic',fontSize:18,fontWeight:'bold'}}>Correo Electronico:</Text> 
+                              <Text style={{marginLeft:10,marginRight:15,fontStyle:'italic',fontSize:18,fontWeight:'bold'}}>Correo:</Text> 
 
-                              <TextInput style={{marginRight:20,borderColor:'grey',width:140}} 
+                              <TextInput style={{marginRight:20,borderColor:'grey',width:130}} 
 
                                       placeholder="Introduce tu Correo..."  
                                       onChangeText={(correo) => setCorreo(correo)} 
